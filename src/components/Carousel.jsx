@@ -18,10 +18,10 @@ const Carousel = () => {
   const [slide, setSlide] = useState(0);
   const length = sliderData.length;
 
-  const prevSlide = () => {
+  const nextSlide = () => {
     setSlide(slide === length - 1 ? 0 : slide + 1);
   };
-  const nextSlide = () => {
+  const prevSlide = () => {
     setSlide(slide === 0 ? length - 1 : slide - 1);
   };
 
