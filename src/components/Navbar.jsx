@@ -22,22 +22,18 @@ const Navbar = () => {
   return (
     <div className="flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white">
       <div>
-        <h1 onClick={handleNav} className={logo ? "hidden" : "block"}>
-          EUROPE
-        </h1>
+        <h1 className={logo ? "hidden" : "block"}>EuroVoyage Tours</h1>
       </div>
-      <ul className=" hidden md:flex">
-        <li>Home</li>
-        <li>Destination</li>
-        <li>Travel</li>
-        <li>View</li>
+      <ul className=" hidden md:flex pl-80">
+        <li>Why us?</li>
         <li>Book</li>
+        <li>Destinations</li>
       </ul>
       <div className="hidden md:flex">
         <BiSearch className="mr-2" size={20} />
         <BsPerson size={20} />
       </div>
-      {/* Hamburger */}
+      {/* Hamburger menu */}
       <div onClick={handleNav} className="md:hidden z-10">
         {nav ? (
           <AiOutlineClose className="text-black" size={20} />
@@ -57,11 +53,9 @@ const Navbar = () => {
       >
         <ul>
           <h1>EUROPE</h1>
-          <li className="border-b">Home</li>
-          <li className="border-b">Destination</li>
-          <li className="border-b">Travel</li>
-          <li className="border-b">View</li>
+          <li className="border-b">Why us?</li>
           <li className="border-b">Book</li>
+          <li className="border-b">Destination</li>
           <div className="flex flex-col">
             <button className="my-6">Search</button>
             <button>Account</button>

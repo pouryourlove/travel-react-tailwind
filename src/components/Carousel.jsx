@@ -4,13 +4,16 @@ import { BsArrowRightSquareFill } from "react-icons/bs";
 
 const sliderData = [
   {
-    url: "https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
+    url: "https://images.unsplash.com/photo-1520986840182-5b15f734c85c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1178&q=80",
+    id: 1,
   },
   {
-    url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80",
+    url: "https://images.unsplash.com/photo-1471623432079-b009d30b6729?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    id: 2,
   },
   {
-    url: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    url: "https://images.unsplash.com/photo-1461838239441-4475121c0b7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    id: 3,
   },
 ];
 
@@ -37,9 +40,17 @@ const Carousel = () => {
       />
 
       {sliderData.map((item, index) => (
-        <div className={index === slide ? "opacity-100" : "opacity-0"}>
+        //To show one at a time
+        <div
+          key={item.id}
+          className={index === slide ? "opacity-100" : "opacity-0"}
+        >
           {index === slide && (
-            <img className="w-full rounded-md" src={item.url} alt="/" />
+            <img
+              className="w-full rounded-md transition-all"
+              src={item.url}
+              alt="/"
+            />
           )}
         </div>
       ))}
