@@ -67,7 +67,7 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 - react-icons을 사용하였습니다
 <details>
 <summary>코드 보기</summary>
-<div markdown="2">
+<div markdown="1">
 ```
 <div className="hidden md:flex">
         <BiSearch className="mr-2" size={20} />
