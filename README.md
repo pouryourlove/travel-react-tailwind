@@ -23,8 +23,61 @@
 
 ## 4. 개발 과정
 
+Tailiwind CSS에서 global styling 기능을 사용하였습니다.
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+```
+@layer base {
+  body {
+    @apply font-[Stoke];
+  }
+  li {
+    @apply p-4;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+  button {
+    @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-md;
+  }
+  .icon {
+    @apply text-2xl cursor-pointer;
+  }
+}
+```
+
+</div>
+</details>
+
+
+
+
+
 ### 4.1. Navbar
- -react-icons을 사용하였습니다
+- react-icons을 사용하였습니다
+```
+<div className="hidden md:flex">
+        <BiSearch className="mr-2" size={20} />
+        <BsPerson size={20} />
+</div>
+```
+
+- Tailiwind CSS 사용해 반응형으로 Navbar를 만들었습니다
+
+
+
+ 
  
   
 
