@@ -77,8 +77,8 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 </div>
 </details>
 
-- md(768picels and up) 기준으로 반응형 디자인을 만들었습니다
-<img src="https://user-images.githubusercontent.com/90593162/226843974-6ca3875c-b2dd-420b-8f12-bd00288d10ee.gif">
+- md(768picels and up) 기준으로 반응형 디자인을 만들었습니다.
+<img src="https://user-images.githubusercontent.com/90593162/226845330-5df8ddf6-6d95-4763-a429-2f29592fd6da.gif">
 
 
 ## 6. 회고 / 느낀점
