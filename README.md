@@ -83,6 +83,40 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 
 - md(768picels and up) 기준으로 반응형 디자인을 만들었습니다.
 <img src="https://user-images.githubusercontent.com/90593162/226845330-5df8ddf6-6d95-4763-a429-2f29592fd6da.gif">
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
 
+``` 
+    <div
+        onClick={handleNav}
+        className={
+          nav
+            ? "absolute text-black left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col"
+            : "absolute left-[-100%] top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col"
+        }
+      >
+        <ul>
+          <h1>EUROPE</h1>
+          <li className="border-b">Why us?</li>
+          <li className="border-b">Book</li>
+          <li className="border-b">Destination</li>
+          <div className="flex flex-col">
+            <button className="my-6">Search</button>
+            <button>Account</button>
+          </div>
+          <div className="flex justify-between my-6">
+            <FaFacebook className="icon" />
+            <FaTwitter className="icon" />
+            <FaYoutube className="icon" />
+            <FaPinterest className="icon" />
+            <FaInstagram className="icon" />
+          </div>
+        </ul>
+      </div> 
+
+```
+</div>
+</details>
 
 ## 6. 회고 / 느낀점
