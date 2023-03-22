@@ -29,7 +29,8 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 <summary>코드 보기</summary>
 <div markdown="1">
 
-```
+``` index.css
+  
 @layer base {
   body {
     @apply font-[Stoke];
