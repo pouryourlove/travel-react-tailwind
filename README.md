@@ -64,18 +64,16 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 
 ### 4.1. Navbar
 
-- react-icons을 사용하였습니다
-<details>
-<summary>코드 보기</summary>
-<div markdown="1">
-```
-<div className="hidden md:flex">
+- react-icons을 사용하였습니다.
+
+``` 
+  <div className="hidden md:flex">
         <BiSearch className="mr-2" size={20} />
         <BsPerson size={20} />
-</div>
+  </div>  
+
 ```
-</div>
-</details>
+
 
 - md(768picels and up) 기준으로 반응형 디자인을 만들었습니다.
 <img src="https://user-images.githubusercontent.com/90593162/226845330-5df8ddf6-6d95-4763-a429-2f29592fd6da.gif">
