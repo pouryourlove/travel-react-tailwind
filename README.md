@@ -65,6 +65,9 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 ### 4.1. Navbar
 
 - react-icons을 사용하였습니다.
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
 
 ``` 
   <div className="hidden md:flex">
@@ -73,6 +76,9 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
   </div>  
 
 ```
+</div>
+</details>
+
 
 
 - md(768picels and up) 기준으로 반응형 디자인을 만들었습니다.
