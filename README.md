@@ -29,7 +29,7 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 <summary>코드 보기</summary>
 <div markdown="1">
 
-``` index.css
+``` css
   
 @layer base {
   body {
@@ -68,7 +68,7 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 <details>
 <summary>코드 보기</summary>
 <div markdown="2">
-```jsx
+```
 <div className="hidden md:flex">
         <BiSearch className="mr-2" size={20} />
         <BsPerson size={20} />
