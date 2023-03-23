@@ -231,21 +231,46 @@ Tailiwind CSS에서 global styling 기능을 사용함
 ### 4.4. Search
 - React from으로 select,input(date) 창 생성
 
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+        <form className="w-full">
+          <div className="flex flex-col my-2">
+            <label>Destination</label>
+            <select className="border rounded-md p-2">
+              <option>London</option>
+              <option>Paris</option>
+              <option>Porto</option>
+              <option>Madrid</option>
+              <option>Helsinki</option>
+            </select>
+          </div>
+          <div className="flex flex-col my-4">
+            <label>Check-in</label>
+            <input className="border rounded-md p-2" type="date" />
+          </div>
+          <div className="flex flex-col my-2">
+            <label>Check-Out</label>
+            <input className="border rounded-md p-2" type="date" />
+          </div>
+          <button className="w-full my-4">Rates & Availabities</button>
+        </form>
+
+```
+</div>
+</details>
+
+### 4.5. Selects
 
 
 
-### 4.3. Selects
 
 
 
 
 
-
-
-
-
-
-  
 
 
 
