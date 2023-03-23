@@ -228,7 +228,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 </div>
 </details>
 
-### 4.3. Search
+### 4.4. Search
 
 -React from 으로 select item 과 input(date) 생성
 
@@ -263,6 +263,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 ```
 </div>
 </details>
+
 
 ### 4.3. Selects
 
