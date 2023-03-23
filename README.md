@@ -203,6 +203,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 ### 4.3. Destinations
 
 -md(768px and up) 기준으로 반응형 디자인 만듬
+
 <img src="https://user-images.githubusercontent.com/90593162/227232653-b551562e-b75e-433d-890e-edab2ebdee53.gif">
 
 <details>
