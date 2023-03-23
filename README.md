@@ -23,7 +23,7 @@
 
 ## 4. 개발 과정
 
-Tailiwind CSS에서 global styling 기능을 사용하였습니다.
+Tailiwind CSS에서 global styling 기능을 사용함
 
 <details>
 <summary>코드 보기</summary>
@@ -92,6 +92,7 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 
 - md(768px and up) 기준으로 반응형 디자인 만듬
 - State를 사용해 햄버거 메뉴 클릭시 모바일 메뉴 나오게 함
+- State를 사용해 메뉴 클릭시 메인 로고 사라지게 함
 <img src="https://user-images.githubusercontent.com/90593162/226845330-5df8ddf6-6d95-4763-a429-2f29592fd6da.gif">
 
 <details>
@@ -149,6 +150,66 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 ```
 </div>
 </details>
+
+### 4.2. Hero
+
+-Video를 배경화면으로 함
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+    <video
+        className="w-full h-full object-cover"
+        src={london}
+        autoPlay
+        loop
+        muted
+      />
+```
+</div>
+</details>
+-Form으로 input 창을 넣어줌
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+        <form className="flex justify-between items-center max-w-[700px] mx-auto w-full border p-1 rounded-md text-black bg-gray-100/90 mt-3">
+          <div>
+            <input
+              className="bg-transparent w-[300px] sm:w-[400px] font-[Stoke] focus:outline-none pl-4 "
+              type="text"
+              placeholder="Search Destination"
+            />
+          </div>
+          <div>
+            <button>
+              <AiOutlineSearch
+                size={20}
+                className="icon"
+                style={{ color: "#ffffff" }}
+              />
+            </button>
+          </div>
+        </form>
+
+```
+</div>
+</details>
+
+### 4.3. Destinations
+
+
+
+        
+
+
+
+
+
+  
 
 
 
