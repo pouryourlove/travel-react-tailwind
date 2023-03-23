@@ -169,7 +169,8 @@ Tailiwind CSS에서 global styling 기능을 사용함
 ```
 </div>
 </details>
--Form으로 input 창을 넣어줌
+
+-React Form으로 input 창 생성
 
 <details>
 <summary>코드 보기</summary>
@@ -200,6 +201,29 @@ Tailiwind CSS에서 global styling 기능을 사용함
 </details>
 
 ### 4.3. Destinations
+
+-md(768px and up) 기준으로 반응형 디자인 만듬
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+      <div className="grid grid-rows-none md:grid-cols-5 py-4 gap-2 md:gap-4">
+        <img
+          className="w-full h-full object-cover col-span-2 md:col-span-3 row-span-2"
+          src={europe5}
+          alt="/"
+        />
+        <img className="w-full h-full object-cover" src={europe1} alt="/" />
+        <img className="w-full h-full object-cover" src={europe2} alt="/" />
+        <img className="w-full h-full object-cover" src={europe3} alt="/" />
+        <img className="w-full h-full object-cover" src={europe4} alt="/" />
+      </div>
+
+```
+</div>
+</details>
 
 
 
