@@ -225,6 +225,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 </div>
 </details>
 
+### 4.3. Search
 
 
         
