@@ -204,7 +204,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 
 -md(768px and up) 기준으로 반응형 디자인 만듬
 
-<img src="https://user-images.githubusercontent.com/90593162/227234218-f44c0906-f810-43f8-81e4-b08bfdaf8216.gif">
+<img src="https://user-images.githubusercontent.com/90593162/227235181-faa1f222-599a-45a3-90c4-4da6ef8bf0b6.gif">
 
 
 <details>
