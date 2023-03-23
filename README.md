@@ -30,6 +30,16 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 <div markdown="1">
 
 ``` css
+
+//making a global style variable
+:root {
+  --primary-dark: #5651e5;
+  --primary-light: #709dff;
+}
+
+.icon {
+  color: var(--primary-dark);
+}
   
 @layer base {
   body {
@@ -64,7 +74,7 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 
 ### 4.1. Navbar
 
-- react-icons을 사용하였습니다.
+- react-icons을 사용함.
 <details>
 <summary>코드 보기</summary>
 <div markdown="1">
@@ -80,15 +90,36 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
 </details>
 
 
-
-- md(768picels and up) 기준으로 반응형 디자인을 만들었습니다.
+- md(768px and up) 기준으로 반응형 디자인 만듬
+- State를 사용해 햄버거 메뉴 클릭시 모바일 메뉴 나오게 함
 <img src="https://user-images.githubusercontent.com/90593162/226845330-5df8ddf6-6d95-4763-a429-2f29592fd6da.gif">
+
 <details>
 <summary>코드 보기</summary>
 <div markdown="1">
 
 ``` 
-    <div
+  const [nav, setNav] = useState(false);
+  const [logo, setLogo] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
+    setLogo(!logo);
+  };
+
+.
+.
+.
+
+      <div onClick={handleNav} className="md:hidden z-10">
+        {nav ? (
+          <AiOutlineClose className="text-black" size={20} />
+        ) : (
+          <HiOutlineMenuAlt4 size={20} />
+        )}
+      </div>
+
+      {/* Mobile menu dropdown */}
+      <div
         onClick={handleNav}
         className={
           nav
@@ -113,10 +144,12 @@ Tailiwind CSS에서 global styling 기능을 사용하였습니다.
             <FaInstagram className="icon" />
           </div>
         </ul>
-      </div> 
+      </div>
 
 ```
 </div>
 </details>
+
+
 
 ## 6. 회고 / 느낀점
