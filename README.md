@@ -1,70 +1,277 @@
-# Getting Started with Create React App
+# :pushpin: EuroVoyage Tours
+>유럽 여행 예약할 수 있는 사이트  
+>https://eurovoyage.netlify.app/  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</br>
 
-## Available Scripts
+## 1. 프로젝트 소개
+  -코로나로 인해 좋아하던 여행을 한동안 못가게 되어 아쉬웠습니다. 그런 마음을 담아 좋아하는 유럽    여행을 테마로 이 프로젝트를 제작하게 되었습니다.
+  
+## 2. 제작 기간 & 참여 인원
+- 2022년 6월 24일 ~ 6월 29일 수정: 2023년 1월 28일
+- 개인 프로젝트
 
-In the project directory, you can run:
+</br>
 
-### `npm start`
+## 3. 사용 기술
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - React.js 
+  - Tailwind CSS
+  - Git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</br>
 
-### `npm test`
+## 4. 개발 과정
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Tailiwind CSS에서 global styling 기능을 사용함
 
-### `npm run build`
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+``` css
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+//making a global style variable
+:root {
+  --primary-dark: #5651e5;
+  --primary-light: #709dff;
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+.icon {
+  color: var(--primary-dark);
+}
+  
+@layer base {
+  body {
+    @apply font-[Stoke];
+  }
+  li {
+    @apply p-4;
+  }
 
-### `npm run eject`
+  h1 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+  button {
+    @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-md;
+  }
+  .icon {
+    @apply text-2xl cursor-pointer;
+  }
+}
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+</div>
+</details>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 4.1. Navbar
 
-## Learn More
+- react-icons을 사용함.
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+``` 
+  <div className="hidden md:flex">
+        <BiSearch className="mr-2" size={20} />
+        <BsPerson size={20} />
+  </div>  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+</div>
+</details>
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- md(768px and up) 기준으로 반응형 디자인 만듬
+- State를 사용해 햄버거 메뉴 클릭시 모바일 메뉴 나오게 함
+- State를 사용해 메뉴 클릭시 메인 로고 사라지게 함
+<img src="https://user-images.githubusercontent.com/90593162/226845330-5df8ddf6-6d95-4763-a429-2f29592fd6da.gif">
 
-### Analyzing the Bundle Size
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+``` 
+  const [nav, setNav] = useState(false);
+  const [logo, setLogo] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
+    setLogo(!logo);
+  };
 
-### Making a Progressive Web App
+.
+.
+.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+      <div onClick={handleNav} className="md:hidden z-10">
+        {nav ? (
+          <AiOutlineClose className="text-black" size={20} />
+        ) : (
+          <HiOutlineMenuAlt4 size={20} />
+        )}
+      </div>
 
-### Advanced Configuration
+      {/* Mobile menu dropdown */}
+      <div
+        onClick={handleNav}
+        className={
+          nav
+            ? "absolute text-black left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col"
+            : "absolute left-[-100%] top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col"
+        }
+      >
+        <ul>
+          <h1>EUROPE</h1>
+          <li className="border-b">Why us?</li>
+          <li className="border-b">Book</li>
+          <li className="border-b">Destination</li>
+          <div className="flex flex-col">
+            <button className="my-6">Search</button>
+            <button>Account</button>
+          </div>
+          <div className="flex justify-between my-6">
+            <FaFacebook className="icon" />
+            <FaTwitter className="icon" />
+            <FaYoutube className="icon" />
+            <FaPinterest className="icon" />
+            <FaInstagram className="icon" />
+          </div>
+        </ul>
+      </div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+</div>
+</details>
 
-### Deployment
+### 4.2. Hero
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-Video를 배경화면으로 함
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
 
-### `npm run build` fails to minify
+``` 
+    <video
+        className="w-full h-full object-cover"
+        src={london}
+        autoPlay
+        loop
+        muted
+      />
+```
+</div>
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-React Form으로 input 창 생성
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+        <form className="flex justify-between items-center max-w-[700px] mx-auto w-full border p-1 rounded-md text-black bg-gray-100/90 mt-3">
+          <div>
+            <input
+              className="bg-transparent w-[300px] sm:w-[400px] font-[Stoke] focus:outline-none pl-4 "
+              type="text"
+              placeholder="Search Destination"
+            />
+          </div>
+          <div>
+            <button>
+              <AiOutlineSearch
+                size={20}
+                className="icon"
+                style={{ color: "#ffffff" }}
+              />
+            </button>
+          </div>
+        </form>
+
+```
+</div>
+</details>
+
+### 4.3. Destinations
+
+-md(768px and up) 기준으로 반응형 디자인 만듬
+
+<img src="https://user-images.githubusercontent.com/90593162/227235181-faa1f222-599a-45a3-90c4-4da6ef8bf0b6.gif">
+
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+      <div className="grid grid-rows-none md:grid-cols-5 py-4 gap-2 md:gap-4">
+        <img
+          className="w-full h-full object-cover col-span-2 md:col-span-3 row-span-2"
+          src={europe5}
+          alt="/"
+        />
+        <img className="w-full h-full object-cover" src={europe1} alt="/" />
+        <img className="w-full h-full object-cover" src={europe2} alt="/" />
+        <img className="w-full h-full object-cover" src={europe3} alt="/" />
+        <img className="w-full h-full object-cover" src={europe4} alt="/" />
+      </div>
+
+```
+</div>
+</details>
+
+### 4.4. Search
+- React from으로 select,input(date) 창 생성
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+        <form className="w-full">
+          <div className="flex flex-col my-2">
+            <label>Destination</label>
+            <select className="border rounded-md p-2">
+              <option>London</option>
+              <option>Paris</option>
+              <option>Porto</option>
+              <option>Madrid</option>
+              <option>Helsinki</option>
+            </select>
+          </div>
+          <div className="flex flex-col my-4">
+            <label>Check-in</label>
+            <input className="border rounded-md p-2" type="date" />
+          </div>
+          <div className="flex flex-col my-2">
+            <label>Check-Out</label>
+            <input className="border rounded-md p-2" type="date" />
+          </div>
+          <button className="w-full my-4">Rates & Availabities</button>
+        </form>
+
+```
+</div>
+</details>
+
+### 4.5. Selects
+
+
+
+
+
+
+
+
+
+
+
+## 6. 회고 / 느낀점
