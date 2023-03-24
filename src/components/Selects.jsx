@@ -11,12 +11,12 @@ import SelectsCard from "./SelectsCard";
 const Selects = () => {
   return (
     <div className="max-w-[1240px] mx-auto px-4 py-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <SelectsCard bg={europe1} />
-      <SelectsCard bg={europe2} />
-      <SelectsCard bg={europe3} />
-      <SelectsCard bg={europe4} />
-      <SelectsCard bg={europe5} />
-      <SelectsCard bg={europe6} />
+      <SelectsCard bg={europe1} text="Belgium" />
+      <SelectsCard bg={europe2} text="the Czech Republic" />
+      <SelectsCard bg={europe3} text="France" />
+      <SelectsCard bg={europe4} text="The Netherlands" />
+      <SelectsCard bg={europe5} text="Germany" />
+      <SelectsCard bg={europe6} text="Italy" />
     </div>
   );
 };
