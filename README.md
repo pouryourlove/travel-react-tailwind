@@ -21,7 +21,7 @@
 
 </br>
 
-## 4. 개발 과정
+## 4. Components
 
 Tailiwind CSS에서 global styling 기능을 사용함
 
@@ -262,16 +262,96 @@ Tailiwind CSS에서 global styling 기능을 사용함
 </div>
 </details>
 
-### 4.5. Selects
+### 4.5. Selects & SelectCards
+
+- Props를 이용해 구현
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+const SelectsCard = (props) => {
+  return (
+    <div className="relative">
+      <img className="w-full h-full object-cover" src={props.bg} alt="/" />
+      <div className="bg-gray-900/30 absolute top-0 left-0 w-full h-full">
+        <p className="left-4 bottom-4 text-2xl font-bold text-white absolute">
+          {props.text}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+```
+</div>
+</details>
+
+- sm과 lg 기준으로 반응형 디자인 만듬
+
+### 4.6. Carousel
+
+State 이용해 Carousel 구현
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+  const Carousel = () => {
+  const [slide, setSlide] = useState(0);
+  const length = sliderData.length;
+
+  const nextSlide = () => {
+    setSlide(slide === length - 1 ? 0 : slide + 1);
+  };
+  const prevSlide = () => {
+    setSlide(slide === 0 ? length - 1 : slide - 1);
+  };
+
+  return (
+    <div className="max-w-[1240px] mx-auto px-4 py-16 relative flex justify-center items-center">
+      <BsArrowLeftSquareFill
+        onClick={prevSlide}
+        className="absolute top-[50%] text-3xl text-white cursor-pointer left-8 "
+      />
+      <BsArrowRightSquareFill
+        onClick={nextSlide}
+        className="absolute top-[50%] text-3xl text-white cursor-pointer right-8"
+      />
+
+      {sliderData.map((item, index) => (
+        //To show one at a time
+        <div
+          key={item.id}
+          className={index === slide ? "opacity-100" : "opacity-0"}
+        >
+          {index === slide && (
+            <img
+              className="w-full rounded-md transition-all"
+              src={item.url}
+              alt="/"
+            />
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 
+```
+</div>
+</details>
+
+### 4.7. Footer
+
+-sm과 lg 기준으로 반응형 디자인 만듬
 
 
-
-
-
-
-
-
+### 5. 문제 해결
+- carousel에 관련된 코드를 작성하던 중 key props에 대한 오류 발생. 
+- 문제 해결 관련 포스팅: https://velog.io/@pouryourlove/Warning-Each-child-in-a-list-should-have-a-unique-key-prop
 
 ## 6. 회고 / 느낀점
