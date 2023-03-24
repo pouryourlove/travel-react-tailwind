@@ -264,7 +264,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 
 ### 4.5. Selects & SelectCards
 
-- Props를 이용해 구현
+-Props를 이용해 구현
 
 <details>
 <summary>코드 보기</summary>
