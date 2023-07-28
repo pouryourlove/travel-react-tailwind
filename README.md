@@ -170,7 +170,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 </div>
 </details>
 
--React Form으로 input 창 생성
+-React form으로 input 창 생성
 
 <details>
 <summary>코드 보기</summary>
@@ -229,7 +229,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 </details>
 
 ### 4.4. Search
-- React from으로 select,input(date) 창 생성
+- React form으로 select,input(date) 창 생성
 
 <details>
 <summary>코드 보기</summary>
