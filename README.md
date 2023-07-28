@@ -154,7 +154,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 
 ### 4.2. Hero
 
--비디오를 배경화면으로 사용한 섹션
+- 비디오를 배경화면으로 사용한 섹션
 <details>
 <summary>코드 보기</summary>
 <div markdown="1">
@@ -171,7 +171,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 </div>
 </details>
 
--React form을 사용하여 input 창 생성
+- React form을 사용하여 input 창 생성
 
 <details>
 <summary>코드 보기</summary>
