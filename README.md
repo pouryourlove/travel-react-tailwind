@@ -5,10 +5,11 @@
 </br>
 
 ## 1. 프로젝트 소개
-  -코로나로 인해 좋아하던 여행을 한동안 못가게 되어 아쉬웠습니다. 그런 마음을 담아 좋아하는 유럽    여행을 테마로 이 프로젝트를 제작하게 되었습니다.
+  - EuroVoyage는 코로나로 인해 여행을 못 간 지난날의 그리움을 담아 유럽 여행을 테마로 제작된 웹 애플리케이션입니다.
   
 ## 2. 제작 기간 & 참여 인원
-- 2022년 6월 24일 ~ 6월 29일 수정: 2023년 1월 28일
+- 제작 기간: 2022년 6월 24일 ~ 6월 29일
+- 수정: 2023년 1월 28일
 - 개인 프로젝트
 
 </br>
@@ -21,7 +22,7 @@
 
 </br>
 
-## 4. Components
+## 4. 주요 컴포넌트
 
 Tailiwind CSS에서 global styling 기능을 사용함
 
@@ -74,7 +75,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 
 ### 4.1. Navbar
 
-- react-icons을 사용함.
+- react-icons 라이브러리를 사용한 아이콘 구현
 <details>
 <summary>코드 보기</summary>
 <div markdown="1">
@@ -91,8 +92,8 @@ Tailiwind CSS에서 global styling 기능을 사용함
 
 
 - md(768px and up) 기준으로 반응형 디자인 만듬
-- State를 사용해 햄버거 메뉴 클릭시 모바일 메뉴 나오게 함
-- State를 사용해 메뉴 클릭시 메인 로고 사라지게 함
+- 반응형 디자인으로 모바일 화면에서는 햄버거 메뉴가 나타남
+- State를 활용하여 메뉴 클릭시 메인 로고가 사라지도록 구현
 <img src="https://user-images.githubusercontent.com/90593162/226845330-5df8ddf6-6d95-4763-a429-2f29592fd6da.gif">
 
 <details>
@@ -153,7 +154,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 
 ### 4.2. Hero
 
--Video를 배경화면으로 함
+-비디오를 배경화면으로 사용한 섹션
 <details>
 <summary>코드 보기</summary>
 <div markdown="1">
@@ -170,7 +171,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 </div>
 </details>
 
--React form으로 input 창 생성
+-React form을 사용하여 input 창 생성
 
 <details>
 <summary>코드 보기</summary>
@@ -202,7 +203,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 
 ### 4.3. Destinations
 
--md(768px and up) 기준으로 반응형 디자인 만듬
+- 반응형 디자인을 적용하여 md(768px and up) 기준으로 다른 레이아웃 제공
 
 <img src="https://user-images.githubusercontent.com/90593162/227235181-faa1f222-599a-45a3-90c4-4da6ef8bf0b6.gif">
 
@@ -229,7 +230,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 </details>
 
 ### 4.4. Search
-- React form으로 select,input(date) 창 생성
+- React form을 활용하여 select,input(date) 창 생성
 
 <details>
 <summary>코드 보기</summary>
@@ -264,7 +265,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 
 ### 4.5. Selects & SelectCards
 
-- Props를 이용해 구현
+- Props를 이용하여 여러 장소 카드 구현
 
 <details>
 <summary>코드 보기</summary>
@@ -288,11 +289,11 @@ const SelectsCard = (props) => {
 </div>
 </details>
 
-- sm과 lg 기준으로 반응형 디자인 만듬
+- 반응형 디자인으로 sm과 lg 기준에 맞게 다른 레이아웃 제공
 
 ### 4.6. Carousel
 
-State 이용해 Carousel 구현
+- State 이용하여 이미지 슬라이더 구현
 
 <details>
 <summary>코드 보기</summary>
@@ -347,12 +348,22 @@ State 이용해 Carousel 구현
 
 ### 4.7. Footer
 
--sm과 lg 기준으로 반응형 디자인 만듬
+-반응형 디자인으로 sm과 lg 기준에 맞게 다른 레이아웃 제공
 
 
 ### 5. 문제 해결
-- carousel에 관련된 코드를 작성하던 중 key props에 대한 오류 발생. 
-- 문제 해결 관련 포스팅: https://velog.io/@pouryourlove/Warning-Each-child-in-a-list-should-have-a-unique-key-prop
+🔍 carousel에 관련된 코드를 작성하던 중 key props에 대한 오류 발생. 
+
+- item마다 고유한 key prop을 할당해주었고 sliderData에 id 값을 추가하였음. 
+- 관련 블로그 포스팅: https://velog.io/@pouryourlove/Warning-Each-child-in-a-list-should-have-a-unique-key-prop
+ 
+🔍 React carousel 로직이 이해가지 않아 구현에 어려움을 겪음.
+
+- 구글링을 통해 로직을 공부하고 이해한 뒤 구현하였음.
+- 관련 블로그 포스팅: https://velog.io/@pouryourlove/Warning-Each-child-in-a-list-should-have-a-unique-key-prop
 
 ## 6. 회고 / 느낀점
-처음으로 Tailiwind CSS를 써본 프로젝트로 처음에는 사용이 많이 낯설었지만 써볼수록 왜 개발자들 사이에서 인기가 많은지 느낄 수 있었습니다. 첫번째로, 별도의 CSS파일을 작성하지 않고 한페이지에서 바로 작성할 수 있기 때문에 개발 시간을 많이 단축해 준다는 느낌이 들었습니다. 또 클래스 이름이 이미 정해져 있기 때문에 조금만 익숙해지면 훨씬 손쉽게 일관성 있는 디자인을 할 수 있다는 것이 매력적이었습니다. CSS 코드를 따로 작성 하지 않기 때문에 전체적으로 봤을 때 조금 복잡해 보인다는 단점도 있지만 장점들이 이 단점을 상쇄할만큼 매력적인 CSS 프레임워크라고 생각이 들었습니다. 이와는 별개로, carousel 컴포넌트에서 코드를 작성하고 나서 key props에 대한 오류가 발생했는데, 오류를 검색하고 해결하고 나고 생각해보니 분명 강의를 들으면서 공부했던 내용이었습니다. 확실히 강의로 공부하는 것보다 실제 만들어가면서 에러를 맞닥뜨리고 해결하는것이 기억에 더 많이 남는구나라는 것을 느끼게 된 에러였습니다.  
+이번 프로젝트를 진행하며 새로운 기술인 Tailiwind CSS를 처음으로 써보았는데, 처음에는 사용이 낯설었지만 시간이 지날수록 그 매력을 점점 느낄 수 있었습니다. Tailwind CSS를 사용하면 별도의 CSS 파일을 작성하지 않고도 페이지 내에서 직접 디자인을 구성할 수 있어서 개발 시간을 크게 절약할 수 있었습니다. 또, 클래스 이름이 이미 정해져 있기 때문에 조금만 익숙해지면 훨씬 손쉽게 일관성 있는 디자인을 할 수 있다는 것이 매력적이었습니다. 하지만 CSS 코드를 따로 작성 하지 않기 때문에 전체적으로 봤을 때 코드가 복잡해 보여 아쉬웠습니다. 그래도 장점들이 이 단점을 상쇄할만큼 매력적인 CSS 프레임워크라고 생각합니다.  
+
+carousel 컴포넌트에서 코드를 작성할때는 key props에 대한 오류가 발생했는데, 오류를 검색한 후 해결하고 생각해보니 분명 강의를 들으면서 공부했던 내용이었습니다. 강의를 통해 공부하는 것도 중요하지만, 실제로 프로젝트를 만들면서 발생하는 오류들을 직접 해결해나가는 과정에서의 배움의 가치가 깊게 느껴졌습니다. 앞으로도 계속해서 더 나은 프로젝트를 만들기 위해 노력하고, 새로운 기술에도 도전해보고 싶습니다. 
+
