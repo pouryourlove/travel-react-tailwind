@@ -232,7 +232,7 @@ Tailiwind CSS에서 global styling 기능을 사용함
 ### 4.4. Search
 - React form을 활용하여 select,input(date) 창 생성
 
-<img src="https://github.com/pouryourlove/ultimate-react-course-main/assets/90593162/ddfc9283-2118-41c1-8343-2c25ce2ee881">
+<img src="https://github.com/pouryourlove/ultimate-react-course-main/assets/90593162/60531636-b678-45c0-92f8-f4cf836c285f">
 
 <details>
 <summary>코드 보기</summary>
